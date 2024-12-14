@@ -2,6 +2,8 @@ package Figures.Figure;
 
 import Figures.Figures;
 
+import javax.swing.*;
+
 public class Queen extends Figures {
 
 
@@ -11,7 +13,7 @@ public class Queen extends Figures {
     }
 
     @Override
-    public void move(int TargetX, int TargetY) {
+    public void move(int TargetX, int TargetY, JPanel[][] Board) {
 
     }
 }

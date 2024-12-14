@@ -24,12 +24,17 @@ public class Layout extends JFrame {
         JPanel[][] Board  = new JPanel[8][8];
 
         for (int row = 0; row< Board.length;row++){
+
+            char letters = 'a';
+            JLabel Number = new JLabel(String.valueOf(row + 1));
+
             for (int col = 0; col<Board[row].length;col++){
 
                 Board[row][col] = new JPanel();
                 Board[row][col].setPreferredSize(new Dimension(50, 50));  // Größe der Felder
                 Board[row][col].setOpaque(true);
                 Board[row][col].setBorder(new LineBorder(Color.GRAY, 4)); // 10 ist die Dicke des Rahmens);
+                Board[row][col].setLayout(new BorderLayout());
 
 
 
@@ -42,9 +47,18 @@ public class Layout extends JFrame {
                     JLabel iconLabel = new JLabel(knightIcon);
                     Board[row][col].add(iconLabel); // Icon hinzufügen
                 }
+
+                if(row == Board.length- 1){
+
+                    JLabel letter = new JLabel(String.valueOf(letters));
+                    Board[row][col].add(letter, BorderLayout.SOUTH);
+                    letters ++;
+
+                }
                 this.add(Board[row][col]);
 
             }
+            Board[row][0].add(Number, BorderLayout.NORTH);
         }
         JButton Wichtig = new JButton("Press me");
         Board[4][6].add(Wichtig);

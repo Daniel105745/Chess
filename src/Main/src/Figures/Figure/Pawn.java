@@ -2,6 +2,8 @@ package Figures.Figure;
 
 import Figures.Figures;
 
+import javax.swing.*;
+
 public class Pawn extends Figures {
 
     public Pawn(String Name, int PositionX, int PositionY, String Color, boolean Live){
@@ -10,7 +12,9 @@ public class Pawn extends Figures {
 
     }
     @Override
-    public void move(int TargetX, int TargetY) {
+    public void move(int TargetX, int TargetY, JPanel[][] Board) {
+
+        Board[PositionX][PositionY] = Board[PositionX +1][PositionY];
 
     }
 }

@@ -2,6 +2,8 @@ package Figures.Figure;
 
 import Figures.Figures;
 
+import javax.swing.*;
+
 public class King extends Figures {
 
     public King(String Name, int PositionX, int PositionY, String Color, boolean Live){
@@ -10,7 +12,7 @@ public class King extends Figures {
     }
 
     @Override
-    public void move(int TargetX, int TargetY) {
+    public void move(int TargetX, int TargetY, JPanel[][] Board) {
 
     }
 }

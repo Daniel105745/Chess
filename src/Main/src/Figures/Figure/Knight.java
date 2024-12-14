@@ -2,6 +2,8 @@ package Figures.Figure;
 
 import Figures.Figures;
 
+import javax.swing.*;
+
 public class Knight extends Figures {
 
     public Knight(String Name, int PositionX, int PositionY, String Color, boolean Live){
@@ -11,7 +13,7 @@ public class Knight extends Figures {
 
 
     @Override
-    public void move(int TargetX, int TargetY) {
+    public void move(int TargetX, int TargetY, JPanel[][] Board) {
 
     }
 }
